@@ -1,4 +1,5 @@
-FROM python:3.5.1-onbuild
-WORKDIR /code
+FROM python:3.4-alpine
 ADD . /code
-CMD python app.py
+WORKDIR /code
+RUN pip install -r requirements.txt
+CMD ["python", "app.py"]
