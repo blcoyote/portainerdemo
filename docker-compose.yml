@@ -9,7 +9,7 @@ services:
     image: redis
 
     networks:
-      - back-tier
+      - backtier.elcoyote.dk
 
   reverse-proxy:
     image: traefik
