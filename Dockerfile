@@ -1,4 +1,4 @@
-FROM python:3.9-alpine
+FROM arm32v7/python:latest
 ADD . /code
 WORKDIR /code
 RUN pip install -r requirements.txt
