@@ -2,7 +2,7 @@ version: "3.7"
 
 services:
   web:
-    image: 127.0.0.1:5000/portainerdemo
+    image: 127.0.0.1:5000/portainerdemo/web:latest
     build: .
     ports:
       - "8001:8000"
