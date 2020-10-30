@@ -2,7 +2,7 @@ version: "3.3"
 
 services:
   web:
-    image: registry/stackdemo
+    image: 127.0.0.1:5000/portainerdemo
     build: .
     ports:
       - "8001:8000"
