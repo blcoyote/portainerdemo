@@ -9,14 +9,14 @@ services:
     image: redis
 
     networks:
-      - backtier.elcoyote.dk
+      - back-tier
 
   reverse-proxy:
     image: traefik
     command: --api --docker --logLevel="DEBUG" --accesslog # Enables the web UI and tells Traefik to listen to docker
     ports:
-      - "81:81" # The HTTP port
-      - "8080:8080" # The Web UI (enabled by --api)
+      - "810:810" # The HTTP port
+      - "8100:8100" # The Web UI (enabled by --api)
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock # So that Traefik can listen to the Docker events
 
